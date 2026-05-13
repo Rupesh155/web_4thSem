@@ -4,6 +4,8 @@ let canvas=document.querySelector("canvas")
   let cell=50
   let direction="right"
   let gameOver=false
+  let randomCell=generateR()
+  let score=0
   let id=setInterval(()=>{
     draw()
     update()
@@ -29,16 +31,25 @@ let canvas=document.querySelector("canvas")
   function draw(){
     if(gameOver==true){
       clearInterval(id)
+      pen.fillStyle="snow"
+      pen.font="40px sans-sarif"
+      pen.fillText("Game over!!",200,100)
       return
     }
+   
     pen.fillStyle="red"
     pen.clearRect(0,0,1000,600)
     for(let a of snakeCell){
         pen.fillRect(a[0],a[1],cell,cell)
 
     }
+    pen.fillStyle="pink"
+    pen.font="40px sans-sarif"
+pen.fillText(`${score}`,100,300)
+    pen.fillStyle="yellow"
+    pen.fillRect(randomCell[0],randomCell[1],cell,cell)
   }
-  draw()
+
   function update(){
   let headX=  snakeCell[snakeCell.length-1][0]
   let headY=  snakeCell[snakeCell.length-1][1]
@@ -74,6 +85,29 @@ let canvas=document.querySelector("canvas")
     }
   }
   snakeCell.push([newX,newY])
-  snakeCell.shift()
+  if(newX==randomCell[0] && newY==randomCell[1]){
+    randomCell=generateR()
+    score++;
+  }else{
+    snakeCell.shift()
+
   }
+
+  }
+
+
+     function generateR(){
+      return [
+            Math.floor(Math.random()*950/cell)*cell ,
+         Math.floor(Math.random()*550/cell)*cell 
+      ]
+
+     }
+ 
+     
+
+      // console.log(Math.random()*950,"RANDOM DATAAAA X");
+      // console.log(Math.random()*550,"RANDOM DATAAAA   Y");
+
+      
 
