@@ -10,7 +10,7 @@ let canvas=document.querySelector("canvas")
     draw()
     update()
 
-  },200)
+  },100)
 
   document.addEventListener("keydown",(e)=>{
     console.log(e);
