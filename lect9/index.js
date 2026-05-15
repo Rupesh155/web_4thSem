@@ -18,14 +18,10 @@ btn.addEventListener("click",()=>{
 
 
 function show(val){
-
-
   for(let i of val){
     let img=  document.createElement("img")
     console.log(i.show.image.original,"heheh");
-    img.setAttribute("src",i.show.image.original)
-    
-    
+    img.setAttribute("src",i.show.image.original)   
     list.append(img)
 
   }
@@ -65,3 +61,10 @@ function show(val){
 //   let searchText = input.value;
 //   let data = fetchData(searchText);
 // })
+
+
+
+
+let apiK='9f6290d6cda9a36a63755fadee71f83d'
+let city="bhopal"
+`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiK}`
