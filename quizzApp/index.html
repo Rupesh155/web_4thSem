@@ -258,12 +258,7 @@
   // function loadQuestion(){
   //   answered=false
   //   timeLeft=15
-  //   document.querySelector("#timer").textContent=timeLeft
-  //       document.getElementById('nextBtn').disabled = true;
-  //           const q = questions[currentQuestion];
-  //   document.getElementById('questionNum').textContent =
-  //     `Question ${currentQuestion + 1} of ${questions.length}`;
-  //   document.getElementById('question').textContent = q.question;
+  
   // }
   // loadQuestion()
 
@@ -271,7 +266,13 @@
   function loadQuestion() {
     answered = false;
     timeLeft = 15;
-    document.getElementById('timer').textContent = timeLeft;
+    // document.getElementById('timer').textContent = timeLeft;
+      document.querySelector("#timer").textContent=timeLeft
+        document.getElementById('nextBtn').disabled = true;
+            const q = questions[currentQuestion];
+    document.getElementById('questionNum').textContent =
+      `Question ${currentQuestion + 1} of ${questions.length}`;
+    document.getElementById('question').textContent = q.question;
 
 
 
