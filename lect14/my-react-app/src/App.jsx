@@ -1,5 +1,8 @@
 // import { useState } from "react"
 
+import { useEffect } from "react"
+import { useState } from "react"
+
 // import { useState } from "react"
 // import Home from "./Home"
 
@@ -210,17 +213,103 @@
 // export default App
 
 
-import React from 'react'
-import Form from './Form'
+// import React from 'react'
+// import Form from './Form'
 
+// const App = () => {
+//   return (
+//     <div>
+//       <Form/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// import React, { useState } from 'react'
+
+// const App = () => {
+//             let [input,SetInput]=      useState("")
+//             let [data,SetData]=      useState("")
+//   function fun1(e){
+//     // console.log(e.target.type);
+//     SetInput(e.target.value) 
+//   }
+//   function done(){
+//     SetData(input)
+//     SetInput("")
+
+//   }
+//   return (
+//     <div>
+//       <h2>{data}</h2>
+//       <input   type='text'  name='input'  value={input}  onChange={fun1}/>
+//       <button onClick={done}>click</button>
+//       {/* <input type='email'/> */}
+//     </div>
+//   )
+// }
+
+// export default App
+
+// import React from 'react'
+// import Form from './Form'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Form/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// import React from 'react'
+// import Form from './Form'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Form/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+import './App.css'
 const App = () => {
+      let [ApiData,SetApiData]=    useState([])
+      useEffect(()=>{
+              //  console.log("hello"); 
+              async  function call(){
+                let res=  await  fetch("https://dummyjson.com/products")
+                let data=        await   res.json()
+                console.log(data.products);
+                SetApiData(data.products)
+              }
+              call()
+      },[])
+      
   return (
-    <div>
-      <Form/>
+    <div id="parent_div"   className="">
+        {
+          ApiData.map((a)=>{
+               return(
+                <div id="card">
+                  <h1>{a.id}</h1>
+                  <img  src={a.thumbnail}/>
+                </div>
+               )
+          })
+        }
     </div>
   )
 }
 
 export default App
-
-
