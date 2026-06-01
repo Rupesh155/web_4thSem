@@ -282,32 +282,35 @@ import { useState } from "react"
 
 
 
-import './App.css'
-const App = () => {
-      let [ApiData,SetApiData]=    useState([])
-      useEffect(()=>{
-              //  console.log("hello"); 
-              async  function call(){
-                let res=  await  fetch("https://dummyjson.com/products")
-                let data=        await   res.json()
-                console.log(data.products);
-                SetApiData(data.products)
-              }
-              call()
-      },[])
+// import './App.css'
+// const App = () => {
+//       let [ApiData,SetApiData]=    useState([])
+//       useEffect(()=>{
+//               //  console.log("hello"); 
+//               async  function call(){
+//                 let res=  await  fetch("https://dummyjson.com/products")
+//                 let data=        await   res.json()
+//                 console.log(data.products);
+//                 SetApiData(data.products)
+//               }
+//               call()
+//       },[])
       
+//   return (
+//     <div id="parent_div"   className="">
+//     </div>
+//   )
+// }
+
+// export default App
+
+import React from 'react'
+import Task from "./Task"
+
+const App = () => {
   return (
-    <div id="parent_div"   className="">
-        {
-          ApiData.map((a)=>{
-               return(
-                <div id="card">
-                  <h1>{a.id}</h1>
-                  <img  src={a.thumbnail}/>
-                </div>
-               )
-          })
-        }
+    <div>
+      <Task/>
     </div>
   )
 }
