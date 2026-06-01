@@ -34,12 +34,42 @@ const Task = () => {
         })
     }, [])
 
+    function fun1(){
+        console.log("dortt");
+        
+       let sortData= [...ApiData].sort((a,b)=>{
+             return a.price-b.price
+
+        })
+        SetApiData(sortData)
+        console.log(sortData,"hello");
+        
+
+    }
+
+
+    function fun2(){
+        console.log("dortt");
+        
+       let sortData= [...ApiData].sort((a,b)=>{
+             return b.price-a.price
+
+        })
+        SetApiData(sortData)
+        console.log(sortData,"hello");
+        
+
+    }
+
 
 
     return (
         <div>
             <input onChange={(e) => SetSearch(e.target.value)} />
             <button onClick={apiCall}>click</button>
+            <button onClick={fun1}>low</button>
+            <button onClick={fun2}>high</button>
+
 
             {
                 ApiData.map((a) => {
@@ -48,6 +78,9 @@ const Task = () => {
                             thumbnail
                         } />
                         <h3>{a.id}</h3>
+                        <h3>{a.price}</h3>
+
+
                     </div>)
                 })
             }
@@ -56,3 +89,10 @@ const Task = () => {
 }
 
 export default Task
+
+
+
+
+// [2,1,4,5]
+
+// <a-b></a-b>
