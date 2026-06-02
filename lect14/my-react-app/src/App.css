@@ -1,17 +1,14 @@
-#parent_div{
+#nav{
+  height: 50px;
+  background-color: black;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
 }
-
-#card{
-  height: 201px;
-  width: 151px;
-  border-radius: 21px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  background-color: rgb(24, 237, 9);
+*{
+  margin: 0;
+  padding: 0;
 }
-img{
-  height: 100%;
-  width: 100%;
+li{
+  color: snow;
 }

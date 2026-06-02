@@ -20,7 +20,7 @@ const Home = () => {
     console.log("hellloooooooooo");
     
   return (
-    <div></div>
+    <div> homeee</div>
   )
 }
 
