@@ -1,9 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Todo.css";
 
 const Todo = () => {
   const [task, setTask] = useState("");
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(()=>{
+    let data=  localStorage.getItem("key")
+    if(data){
+        return JSON.parse(data)
+    }
+    return []
+  });
+  useEffect(()=>{
+    localStorage.setItem("key",JSON.stringify(todos))
+
+  },[todos])
 
 
 
