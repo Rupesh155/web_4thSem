@@ -318,30 +318,72 @@ import { useState } from "react"
 // export default App
 
 
-import React from 'react'
-import NavBar from "./NavBar"
-import { Route, Routes } from "react-router-dom"
-import Home from "./Home"
-import About from "./About"
-import Task from "./Task"
+// import React from 'react'
+// import NavBar from "./NavBar"
+// import { Route, Routes } from "react-router-dom"
+// import Home from "./Home"
+// import About from "./About"
+// import Task from "./Task"
+// const App = () => {
+//   return (
+//     <div>
+//       <NavBar/>
+//       <Routes>
+//         <Route    path="/"   element={<Home/>}/>
+//         <Route    path="/about"   element={<About/>}/>
+//         <Route    path="/task"   element={<Task/>}/>
+//       </Routes>
+//     </div>
+//   )
+// }
 
-const App = () => {
-  return (
-    <div>
-      <NavBar/>
-      <Routes>
-        <Route    path="/"   element={<Home/>}/>
-        <Route    path="/about"   element={<About/>}/>
-        <Route    path="/task"   element={<Task/>}/>
-      </Routes>
-    </div>
-  )
-}
-
-export default App
+// export default App
 
 // http://localhost:5173/
 
 
 
 // google.com/insta/userID
+
+
+
+// import React from 'react'
+// import NavBar from "./NavBar"
+// import { Route, Routes } from "react-router-dom"
+// import Home from "./Home"
+// import About from "./About"
+// import Task from "./Task"
+// const App = () => {
+//   return (
+//     <div>
+//       <NavBar/>
+//       <Routes>
+//          <Route  path="/"  element={<Home/>}/>
+//          <Route  path="/about"  element={<About/>}/>
+//          <Route  path="/task"  element={<Task/>}/>
+
+
+//       </Routes>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// // google.com/whatApp/userID
+// // localhost:5173/about
+
+
+
+import React from 'react'
+import Todo from "./Todo"
+
+const App = () => {
+  return (
+    <div>
+      <Todo/>
+    </div>
+  )
+}
+
+export default App
