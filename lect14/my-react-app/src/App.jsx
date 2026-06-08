@@ -374,12 +374,43 @@ import { useState } from "react"
 // // localhost:5173/about
 
 
+// import React from 'react'
+// import Todo from "./Todo"
+
+// const App = () => {
+//   return (
+//     <div><Todo/></div>
+//   )
+// }
+
+// export default App
+
+
 import React from 'react'
-import Todo from "./Todo"
+import Home from "./Home"
+
+//main-> app-> A-> b-> C
+
+
+
+import NavBar from "./NavBar"
+
+import { Route, Routes } from "react-router-dom"
+import Cart from "./Cart"
 
 const App = () => {
+  let [apiData,SetApiData] =   useState([])
+ let [cart,SetCart]= useState([])
   return (
-    <div><Todo/></div>
+
+    <div>
+      <NavBar/>
+      <Routes>
+        <Route path="/" element={<Home apiData={apiData}  SetApiData={SetApiData} cart={cart}  SetCart={SetCart}/>}/>
+        <Route path="/cart" element={<Cart cart={cart}/>}/>
+
+      </Routes>
+    </div>
   )
 }
 
