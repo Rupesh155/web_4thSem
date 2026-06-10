@@ -1,7 +1,5 @@
 // import { useState } from "react"
 
-import { useEffect } from "react"
-import { useState } from "react"
 
 // import { useState } from "react"
 // import Home from "./Home"
@@ -386,30 +384,104 @@ import { useState } from "react"
 // export default App
 
 
-import React from 'react'
-import Home from "./Home"
+
 
 //main-> app-> A-> b-> C
 
 
 
-import NavBar from "./NavBar"
+// import NavBar from "./NavBar"
 
-import { Route, Routes } from "react-router-dom"
-import Cart from "./Cart"
+// import { Route, Routes } from "react-router-dom"
+// import Cart from "./Cart"
+
+//  //main -> App-> Home-> A 
+
+
+
+
+
+// const App = () => {
+// //   let [apiData,SetApiData] =   useState([])
+// //  let [cart,SetCart]= useState([])
+//   return (
+
+//     <div>
+//       <NavBar/>
+//       <Routes>
+//         <Route path="/" element={<Home apiData={apiData}  SetApiData={SetApiData} cart={cart}  SetCart={SetCart}/>}/>
+//         <Route path="/cart" element={<Cart cart={cart}/>}/>
+
+//       </Routes>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+// const App = () => {
+  
+//   return (
+//     <div>
+//       <NavBar/>
+//       <Routes>
+//         <Route  path="/"  element={<Home />}/>
+//         <Route  path="/cart"  element={<Cart/>}/>
+
+//       </Routes>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+// import React, { useReducer } from 'react'
+
+// const App = () => {
+//   let data={
+//     input:"",
+//     todos:[]
+//   }
+//   function reduser(state,action){
+//     if(action.type==="SET_TODO"){
+//       return{
+//         ...state,
+//         input:action.payload
+//       }
+//     }
+//     else if(action.type==="Add_todo"){
+//       return{
+//         ...state,
+//         todos:[...state.todos,state.input]
+//       }
+//     }
+
+//   }
+//    let [state,dispatch]=   useReducer(reduser,data)
+//   return (
+//     <div>
+//       <input onChange={(e)=>dispatch({type:"SET_TODO",payload:e.target.value})}/>
+//       <button onClick={()=>dispatch({type:"Add_todo"})}>add</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+import React from 'react'
+import Todo from './Todo'
 
 const App = () => {
-  let [apiData,SetApiData] =   useState([])
- let [cart,SetCart]= useState([])
   return (
-
     <div>
-      <NavBar/>
-      <Routes>
-        <Route path="/" element={<Home apiData={apiData}  SetApiData={SetApiData} cart={cart}  SetCart={SetCart}/>}/>
-        <Route path="/cart" element={<Cart cart={cart}/>}/>
-
-      </Routes>
+      <Todo/>
     </div>
   )
 }
