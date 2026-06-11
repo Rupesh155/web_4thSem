@@ -17,6 +17,14 @@ function reducer(store, action) {
             ...store,
             todos:[...store.todos,store.input]
         }
+    }else if(action.type=="delet"){
+        return{
+            ...store,
+            todos:store.todos.filter((a,b)=>{
+                return b!=action.payload
+
+            })
+        }
     }
 }
 const Context = ({ children }) => {

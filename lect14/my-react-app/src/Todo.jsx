@@ -313,11 +313,12 @@ const Todo = () => {
       <input onChange={(e)=>dispatch({type:"Set_inp",payload:e.target.value})}/>
       <button onClick={()=>dispatch({type:"Add_todo"})}>add</button>
       {
-        store.todos.map((a)=>{
+        store.todos.map((a,id)=>{
           console.log(a);
           
           return(<>
           <h6>{a}</h6>
+          <button onClick={()=>dispatch({type:"delet",payload:id})}>delet</button>
           </>)
         })
       }
