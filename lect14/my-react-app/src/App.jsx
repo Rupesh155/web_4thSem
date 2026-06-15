@@ -737,13 +737,35 @@ import useCounter from "./useCounter"
 // export default App
 
 
+// import React from 'react'
+// import Home from "./Home"
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Home/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
 import React from 'react'
-import Home from "./Home"
+import UserList from "./UserList"
+import { Route, Routes } from "react-router-dom"
+import UserProfile from "./UserProfile"
 
 const App = () => {
   return (
     <div>
-      <Home/>
+     {/* http://localhost:5173/profile/0 */}
+      <Routes>
+        <Route   path="/"   element={ <UserList/>}/>
+        <Route   path="/profile/:id"   element={ <UserProfile/>}/>
+
+      </Routes>
     </div>
   )
 }
