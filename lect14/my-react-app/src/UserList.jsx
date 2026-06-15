@@ -7,18 +7,14 @@ const UserList = () => {
     function fun1(id){
         // console.log(id);
         navigate(`/profile/${id}`)
-    
-        
 
     }
    
   return (
     <div>{list.map((data,id)=>{
         return(<>
-        <h2 key={id}>{data}</h2>
-      
+        <h2  className='bg-green-900' key={id}>{data}</h2>
         <button  onClick={()=>fun1(id)}>show</button>
-     
         </>)
     })}
         </div>
